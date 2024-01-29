@@ -16,5 +16,4 @@ darkMode?.addEventListener("change", (e) => {
     if (theme === "dark") {
         darkMode.checked = true;
     }
-    console.log("1");
 })();

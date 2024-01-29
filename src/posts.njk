@@ -1,0 +1,33 @@
+---
+title: Posts
+layout: "base.njk"
+---
+
+<div class="products-container">
+    <ul role="list" class="products-list">
+        {%- for post in posts | reverse-%}
+
+        <li class="products-list-item">
+            <div class="card">
+                <div class="card-img">
+                    <p>{{post.body}}</p>
+                </div>
+                <div class="card-content">
+                    <div class="product-name">
+                        <h3>{{post.title}}</h3>
+                        <ul>
+                            {%- for tag in post.tags | reverse-%}
+                            <li>{{tag}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="turn-btn">
+                        <button>Details</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        {% endfor %}
+    </ul>
+</div>

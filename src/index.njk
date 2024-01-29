@@ -3,4 +3,17 @@ title: Hello
 layout: "base.njk"
 ---
 
-<h1 class="h1"> Hello you. You there, right?!</h1>
+<div class="products-container">
+    <ul role="list" class="products-list">
+        {%- for quote in quotes | reverse-%}
+        <li style="text-align: center; width: 70%;margin-bottom: 20px; border: 1px solid var(--secondary);
+             border-radius: 10px; padding: 15px;">
+            <p> {{quote.quote}} </p>
+            <div style="text-align: right; font-weight: bold; padding: 10px;">
+                - {{quote.author}}
+            </div>
+        </li>
+
+        {% endfor %}
+    </ul>
+</div>
