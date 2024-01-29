@@ -1,0 +1,29 @@
+---
+title: Blogs
+layout: "base.njk"
+---
+
+<div class="products-container">
+    <ul role="list" class="products-list">
+        {%- for product in collections.product | reverse-%}
+
+        <li class="products-list-item">
+            <div class="card">
+                <div class="card-img">
+                    <img src="{{product.data.image}}" alt="{{product.data.altImage}}" loading="lazy" />
+                </div>
+                <div class="card-content">
+                    <div class="product-name">
+                        <p>{{product.data.date | postDate}}</p>
+                        <h3>{{product.data.title}}</h3>
+                    </div>
+                    <div class="turn-btn">
+                        <button>Details</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,114 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 2px 16px var(--grey-5);
+    cursor: default;
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: var(--all-03s);
+    padding: 10px;
+}
+
+.card:hover>.card-img>img {
+    transform: scale(1.1);
+}
+
+.card-img {
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img>img {
+    transition: var(--all-03s);
+    display: inline;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.card-img>img {
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.card-content {
+    transition: var(--all-03s);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content * {
+    margin: 0;
+    padding: 0;
+}
+
+.product-name {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product-name>p:first-child {
+    font-weight: bold;
+}
+
+.turn-btn {
+    justify-content: flex-end;
+    transition: var(--all-03s);
+    width: 100%;
+}
+
+.turn-btn>button {
+    transition: var(--all-03s);
+    width: 100%;
+    padding: 10px 30px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.turn-btn>button:hover {
+    filter: brightness(0.8);
+}
+
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card-content {
+        width: 100%;
+    }
+
+    .description {
+        max-height: 200px;
+    }
+}

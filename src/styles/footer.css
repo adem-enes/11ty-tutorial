@@ -1,0 +1,12 @@
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    --logo-color: currentColor;
+    padding: 10px;
+    height: calc(var(--navbar-height) + 10px);
+    /* color: var(--secondary); */
+    color: var(--white);
+    background-color: var(--green);
+    text-align: center;
+}

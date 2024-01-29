@@ -1,0 +1,30 @@
+@import url("./styles/base.css");
+@import url("./styles/navbar.css");
+@import url("./styles/footer.css");
+@import url("./styles/card.css");
+
+#app {
+    padding: var(--navbar-height) 10px;
+}
+
+h1 {
+    font-size: var(--font-main-header);
+}
+
+h3 {
+    font-size: var(--font-header);
+}
+
+
+.products-list {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+}
+
+.products-list-item {
+    padding: 5px;
+    width: 500px;
+}

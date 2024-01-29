@@ -1,0 +1,134 @@
+:root {
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /*Colors*/
+    --primary: #f0f0f0;
+    --secondary: #191919;
+
+    --white: #f0f0f0;
+    --black: #191919;
+    --blue: #377acc;
+    --green: #5e8166;
+    --grey-1: #333333;
+    --grey-2: #707070;
+    --grey-3: #a0a0a0;
+    --grey-4: #cccccc;
+    --grey-5: #e0e0e0;
+
+
+    /*Font Sizes*/
+    --font-main-header: 30px;
+    --font-header: 20px;
+    --font-text: 16px;
+    --font-detail: 12px;
+    --font-min: 10px;
+
+    /*Transitions*/
+    --all-03s: all 0.3s;
+
+    --navbar-height: 60px;
+}
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-size: var(--font-text);
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--secondary);
+    overflow-x: hidden;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul:where([role="list"]),
+ol:where([role="list"]) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+[data-theme="dark"] {
+    --primary: #191919;
+    --secondary: #f0f0f0;
+    --grey-1: #e0e0e0;
+    --grey-2: #cccccc;
+    --grey-3: #a0a0a0;
+    --grey-4: #707070;
+    --grey-5: #5d2323;
+}
+
+/*Scroll Style*/
+/*Track*/
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+*:hover::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-3);
+}
